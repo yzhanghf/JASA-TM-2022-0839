@@ -76,7 +76,7 @@ for i = 1:3
     % Move plots closer together
     % xticklabels(ax,{})
     tlo.TileSpacing = 'compact';
-    saveas(h(t),strcat("C:\phd4\network yuan\reduced_u_statistics\matlab_new\plot_new\starlight_type",string(i),".png"))
+    saveas(h(t),strcat("C:\phd4\network Magpie\reduced_u_statistics\matlab_new\plot_new\starlight_type",string(i),".png"))
 end
 
 % 
@@ -133,5 +133,5 @@ for i = 1:3
     % Move plots closer together
     % xticklabels(ax,{})
     tlo.TileSpacing = 'compact';
-    saveas(h(t),strcat("C:\phd4\network yuan\reduced_u_statistics\matlab_new\plot_new\starlight_type",string(i),"nolegend.png"))
+    saveas(h(t),strcat("C:\phd4\network Magpie\reduced_u_statistics\matlab_new\plot_new\starlight_type",string(i),"nolegend.png"))
 end

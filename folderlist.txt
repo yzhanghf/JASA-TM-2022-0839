@@ -1,1 +1,1 @@
-/home/Magpie/U-Statistic-Reduction
+/home/zhang.7824/U-Statistic-Reduction

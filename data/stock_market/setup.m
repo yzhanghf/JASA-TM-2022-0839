@@ -1,10 +1,10 @@
 
 
 fprintf('Compiling h_g1g1g2...\n');
-mex h_g1g1g2_4.cpp -I"/home/zhang.7824/Armadillo/usr/include"
+mex h_g1g1g2_4.cpp -I"/home/Magpie/Armadillo/usr/include"
 
 fprintf('Compiling g112...\n');
-mex g112_function.cpp -I"/home/zhang.7824/Armadillo/usr/include"
+mex g112_function.cpp -I"/home/Magpie/Armadillo/usr/include"
 
 fprintf('Compiling h_redu...\n');
 mex h_redu.c

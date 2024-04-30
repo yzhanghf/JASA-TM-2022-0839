@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --job-name=cp_dt_complete5.sh
-#SBATCH --output=/home/zhang.7824/U-Statistic-Reduction/output/cp_dt_complete5.txt
-#SBATCH --error=/home/zhang.7824/U-Statistic-Reduction/output/cp_dt_complete5.txt
+#SBATCH --output=/home/Magpie/U-Statistic-Reduction/output/cp_dt_complete5.txt
+#SBATCH --error=/home/Magpie/U-Statistic-Reduction/output/cp_dt_complete5.txt
 #SBATCH --time=2-00:00
 #SBATCH --nodes=1 --ntasks-per-node=36 --mem=20gb
 #SBATCH --partition=stat
 #SBATCH --qos=normal
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=ronaldaylmerfisher@gmail.com
-cd /home/zhang.7824/U-Statistic-Reduction
+cd /home/Magpie/U-Statistic-Reduction
 module load matlab
 matlab -nodesktop -r "n=400; al = 1.5; coverage_prob_both_complete"
