@@ -6,7 +6,7 @@ This document maps to the Round 1 revision of this paper.
 * Most, if not all, experiments in this code are likely infeasible to run on personal computers.  Therefore, all reproducibility details are written for running on high-performance computing (HPC) clusters, such as Unity.  In this document, we will use Unity as an example.
 * In this work, we use the word "Magpie" as the anonymized name.
 
-## Steps to reproduce simulation results
+## Steps to reproduce simulation and data example results
 
 0. [Preparation] Upload all contents of this repository to a unity folder, under the path:
    ```
