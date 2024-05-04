@@ -87,6 +87,7 @@ This document maps to the Round 1 revision of this paper.
 5. Run data example codes on Unity.
 
    1. Starlight and earthquake data
+      
         Before run the code, we need to run the following lines to compile the C++ code into MEX file in the right folder:
          ```
          cd /home/Magpie/U-Statistic-Reduction/data/starlight_earthquake/package
@@ -125,6 +126,7 @@ This document maps to the Round 1 revision of this paper.
       Resulting plots will be located at: /home/Magpie/U-statistic-reduction/data/starlight_earthquake/package/data/starlight_earthquake/plot
    
    3. Stock market data
+      
       Before run the code, we still need to run the following lines to compile the C++ code into MEX file in the right folder:
          ```
          cd /home/Magpie/U-Statistic-Reduction/data/stock_market
