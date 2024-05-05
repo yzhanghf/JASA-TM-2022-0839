@@ -88,15 +88,15 @@ This document maps to the Round 1 revision of this paper.
 
    1. Starlight and earthquake data
       
-        Before run the code, we need to run the following lines to compile the C++ code into MEX file in the right folder:
-         ```
-         cd /home/Magpie/U-Statistic-Reduction/data/starlight_earthquake/package
-         module load matlab
-         matlab -nodesktop -nodisplay
-         mex h_g1g1g2_4.cpp -I"/home/Magpie/Armadillo/usr/include"
-         mex g112_function.cpp -I"/home/Magpie/Armadillo/usr/include"
-         mex h_redu.c
-         ```
+      Before running the code, the user might need to run the following lines to compile the C++ code into MEX file in the right folder:
+      ```
+      cd /home/Magpie/U-Statistic-Reduction/data/starlight_earthquake/package
+      module load matlab
+      matlab -nodesktop -nodisplay
+      mex h_g1g1g2_4.cpp -I"/home/Magpie/Armadillo/usr/include"
+      mex g112_function.cpp -I"/home/Magpie/Armadillo/usr/include"
+      mex h_redu.c
+      ```
 
       To reproduce those plots that illustrate the data (but no method yet):
       ```
