@@ -149,7 +149,7 @@ This document maps to the Round 1 revision of this paper.
       ```
       sh stock_run_last_two_plot_commands.sh
       ```
-      Resulting plots will be located at: /home/Magpie/U-statistic-reduction/data/stock_market/data/stock_market
+      Resulting plots will be located at: /home/Magpie/U-statistic-reduction/data/stock_market/data/stock_market/plot
 
 
    
