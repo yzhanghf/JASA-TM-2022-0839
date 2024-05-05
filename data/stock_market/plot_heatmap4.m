@@ -65,6 +65,6 @@ for alindex = 1:length(alpha_all)
     ti = get(gca,'TightInset');
     set(gca, 'Position',[1.65 -1 22 25]);
     set(gcf, 'Units', 'Inches', 'Position', [0 0 10.1 10.5], 'PaperUnits', 'Inches', 'PaperSize', [10, 10])
-    saveas(fig,strcat('./data/stock_market/plot/heatmat_stock_new2',string(al*100),'.png'))
+    saveas(fig,strcat('./data/stock_market/data/stock_market/plot/heatmat_stock_new2',string(al*100),'.png'))
     sum(sum(mean(timecost,3)))
 end
