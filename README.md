@@ -74,8 +74,9 @@ Our method is implemented for the deterministic design and random design (J1):
    https://www.mathworks.com/matlabcentral/fileexchange/66494-fdasrvf
    and unzip its contents to subfolder "/home/Magpie/U-Statistic-Reduction/data/starlight_earthquake/package"
 
-
-In all the steps that follows, if you encounter the error that folder doesn't exist, please manually mkdir.  This is unfortunately due to GitHub's feature of automatically deleting empty subfolders.
+---
+In all the steps that follow, if you encounter the error that folder doesn't exist, please manually mkdir.  This is unfortunately due to GitHub's feature of automatically deleting empty subfolders.
+---
 
 4. Run simulation codes on Unity.  Replace "Magpie" in the following command by your own username.
 
