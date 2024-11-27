@@ -1,6 +1,18 @@
 # Reproducing the results in JASA-TM-2022-0839
 
-This document maps to the Round 1 revision of this paper.
+This document serves to the Round 1 and Round 2 revisions of this paper.
+
+# Functions implementing our method
+
+Our method is implemented for the deterministic design and random design (J1):
+* Deterministic design:  Our_method_reduced_ustat_CI_deterministic.m
+* Random design (J1):  Our_method_reduced_ustat_CI_random.m
+   Run
+   ```
+   help Our_method_reduced_ustat_CI_deterministic
+   help Our_method_reduced_ustat_CI_random
+   ```
+   To display documentation.
 
 ## Hardware requirement:  computing cluster, such as Unity
 * Most, if not all, experiments in this code are likely infeasible to run on personal computers.  Therefore, all reproducibility details are written for running on high-performance computing (HPC) clusters, such as Unity.  In this document, we will use Unity as an example.
@@ -56,6 +68,15 @@ This document maps to the Round 1 revision of this paper.
    mex h_redu.c
    ```
 
+
+3. [Preparation]
+   Download package "fdasrvf" from
+   https://www.mathworks.com/matlabcentral/fileexchange/66494-fdasrvf
+   and unzip its contents to subfolder "/home/Magpie/U-Statistic-Reduction/data/starlight_earthquake/package"
+
+
+In all the steps that follows, if you encounter the error that folder doesn't exist, please manually mkdir.  This is unfortunately due to GitHub's feature of automatically deleting empty subfolders.
+
 4. Run simulation codes on Unity.  Replace "Magpie" in the following command by your own username.
 
    To produce the simulated data for plotting, run the following on Unity:
@@ -90,7 +111,7 @@ This document maps to the Round 1 revision of this paper.
       
       Before running the code, the user might need to run the following lines to compile the C++ code into MEX file in the right folder:
       ```
-      cd /home/Magpie/U-Statistic-Reduction/data/starlight_earthquake/package
+      cd /home/Magpie/U-Statistic-Reduction/data/starlight_earthquake/subroutines
       module load matlab
       matlab -nodesktop -nodisplay
       mex h_g1g1g2_4.cpp -I"/home/Magpie/Armadillo/usr/include"
@@ -100,10 +121,10 @@ This document maps to the Round 1 revision of this paper.
 
       To reproduce those plots that illustrate the data (but no method yet):
       ```
-      cd /home/Magpie/U-Statistic-Reduction/data/starlight_earthquake/package/
+      cd /home/Magpie/U-Statistic-Reduction/data/starlight_earthquake/
       module load matlab
-      matlab -r "confi_starlight_plot"
-      matlab -r "earthquake_plot"
+      matlab -r "starlight_plot_data"
+      matlab -r "earthquake_plot_data"
       ```
 
       To run our method and reproduce related plots, first run:
@@ -123,13 +144,13 @@ This document maps to the Round 1 revision of this paper.
       source("starlight_CI_plot.R");
       source("earthquake_CI_plot.R");
       ```
-      Resulting plots will be located at: /home/Magpie/U-statistic-reduction/data/starlight_earthquake/package/data/starlight_earthquake/plot
+      Resulting plots will be located at: /home/Magpie/U-statistic-reduction/data/starlight_earthquake/plot
    
-   3. Stock market data
+   2. Stock market data
       
       Before run the code, we still need to run the following lines to compile the C++ code into MEX file in the right folder:
          ```
-         cd /home/Magpie/U-Statistic-Reduction/data/stock_market
+         cd /home/Magpie/U-Statistic-Reduction/data/stock_market/subroutines
          module load matlab
          matlab -nodesktop -nodisplay
          mex h_g1g1g2_4.cpp -I"/home/Magpie/Armadillo/usr/include"
@@ -149,7 +170,7 @@ This document maps to the Round 1 revision of this paper.
       ```
       sh stock_run_last_two_plot_commands.sh
       ```
-      Resulting plots will be located at: /home/Magpie/U-statistic-reduction/data/stock_market/data/stock_market/plot
+      Resulting plots will be located at: /home/Magpie/U-statistic-reduction/data/stock_market/plot
 
 
    

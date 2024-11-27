@@ -1,3 +1,6 @@
+
+addpath('subroutine');
+
 clear
 MarkerSize = 12;
 rng(1);

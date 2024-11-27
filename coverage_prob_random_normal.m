@@ -1,4 +1,6 @@
 
+addpath('subroutine');
+
 r = 3;
 percent = 0.1;
 itern = 3000;

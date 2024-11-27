@@ -1,3 +1,6 @@
+
+addpath('subroutine');
+
 rng(1)
 r = 3;
 itern = 10^6;

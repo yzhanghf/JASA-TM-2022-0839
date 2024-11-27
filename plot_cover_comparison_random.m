@@ -1,3 +1,6 @@
+
+addpath('subroutine');
+
 clear
 N = [25,50, 100,200,400];
 alpha = [1.5,1.7];

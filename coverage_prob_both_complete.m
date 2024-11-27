@@ -1,4 +1,5 @@
 
+addpath('subroutine');
 
 r = 3;
 percent = 0.1;
@@ -21,7 +22,6 @@ coverlg3 = zeros(itern,iterc);
 for m = 1:iterc
 for k = 1:itern
     x = sampling(n,type);
-    tic;
     tic;
     M_alpha = min(floor(n^(al-1)),floor((n-1)/(2^(r-1)-1)));
     b2 = 1;

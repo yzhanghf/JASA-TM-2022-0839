@@ -2,7 +2,7 @@ clear
 rng(4)
 w = warning ('off','all');
 itern = 10;
-sectorinfo = readtable("./data/stock_market/stockmarket/constituents_csv.csv", 'TextType', 'string','PreserveVariableNames',false);
+sectorinfo = readtable("./data/constituents_csv.csv", 'TextType', 'string','PreserveVariableNames',false);
 uniqsector = unique(sectorinfo.Sector);
 recordtstat = zeros(length(uniqsector),length(uniqsector),itern);
 recordpval = zeros(length(uniqsector),length(uniqsector));
@@ -27,7 +27,7 @@ for k = 1:length(uniqsector)
             if any(strcmp(nameall,weneed)) ~=1
                 valueall1(i,:) = NaN;
             else
-                data = readtable(strcat("./data/stock_market/stockmarket/stockmarket/",sector1(i)), 'TextType', 'string','PreserveVariableNames',false);
+                data = readtable(strcat("./data/individual_stocks/",sector1(i)), 'TextType', 'string','PreserveVariableNames',false);
                 index_start = find(data.Date=='03-01-2000');
                 if isempty(index_start)
                     valueall1(i,:) = NaN;
@@ -52,7 +52,7 @@ for k = 1:length(uniqsector)
         
         
         sector2 = sectorinfo.Symbol(sectorinfo.Sector == sector2name,:);
-        Files = dir("./data/stock_market/stockmarket/stockmarket");
+        Files = dir("./data/individual_stocks");
         valueall2 = zeros(length(sector2),138);
         deletea = 0;
         j = 0;
@@ -62,7 +62,7 @@ for k = 1:length(uniqsector)
             if any(strcmp(nameall,weneed)) ~=1
                 valueall2(i,:) = NaN;
             else
-                data = readtable(strcat("./data/stock_market/stockmarket/stockmarket/",sector2(i)), 'TextType', 'string','PreserveVariableNames',false);
+                data = readtable(strcat("./data/individual_stocks/",sector2(i)), 'TextType', 'string','PreserveVariableNames',false);
                 index_start = find(data.Date=='03-01-2000');
                 if isempty(index_start)
                     valueall2(i,:) = NaN;
@@ -129,5 +129,5 @@ for k = 1:length(uniqsector)
         recordpvalstd(k,m) = nanstd(pvalue_all);
     end
 end
-save("./data/stock_market/result/CI_stockall5_comp_diag","recordpval","recordpvalstd","recordtstat","timecost","ksei2_all","mu_hat_all")
+save("./result/CI_stockall5_comp_diag","recordpval","recordpvalstd","recordtstat","timecost","ksei2_all","mu_hat_all")
 

@@ -2,9 +2,9 @@ clear
 alpha_all = [1.5,2,2.5];
 for alindex = 1:length(alpha_all)
     al = alpha_all(alindex);
-    load(sprintf("./data/stock_market/result/CI_stockall5%d",al*100))
+    load(sprintf("./result/CI_stockall5%d",al*100))
     w = warning ('off','all');
-    sectorinfo = readtable("./data/stock_market/stockmarket/constituents_csv.csv", 'TextType', 'string','PreserveVariableNames',false);
+    sectorinfo = readtable("./data/constituents_csv.csv", 'TextType', 'string','PreserveVariableNames',false);
     uniqsector = unique(sectorinfo.Sector);
     A = ones(size(recordtstat))*(-100);
     B = tril(A,-1);
@@ -65,6 +65,6 @@ for alindex = 1:length(alpha_all)
     ti = get(gca,'TightInset');
     set(gca, 'Position',[1.65 -1 22 25]);
     set(gcf, 'Units', 'Inches', 'Position', [0 0 10.1 10.5], 'PaperUnits', 'Inches', 'PaperSize', [10, 10])
-    saveas(fig,strcat('./data/stock_market/data/stock_market/plot/heatmat_stock_new2',string(al*100),'.png'))
+    saveas(fig,strcat('./plot/heatmat_stock_new2',string(al*100),'.png'))
     sum(sum(mean(timecost,3)))
 end

@@ -6,8 +6,8 @@
 #SBATCH --nodes=1 --ntasks-per-node=10 --mem=5gb
 #SBATCH --partition=batch8
 #SBATCH --qos=normal
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=ronaldaylmerfisher@gmail.com
-cd /home/Magpie/U-Statistic-Reduction/data/starlight_earthquake/package
+
+
+cd /home/Magpie/U-Statistic-Reduction/data/starlight_earthquake
 module load matlab
 matlab -nodesktop -r "earthquake_plot;  confi_starlight_plot"

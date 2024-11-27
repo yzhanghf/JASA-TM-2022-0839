@@ -1,8 +1,8 @@
 clear
-load(sprintf("./data/stock_market/result/CI_stockall5_comp"))
+load(sprintf("./result/CI_stockall5_comp"))
 recordtstat1 = recordtstat;
 recordtstatstd1 = recordtstatstd;
-load(sprintf("./data/stock_market/result/CI_stockall5_comp_diag"))
+load(sprintf("./result/CI_stockall5_comp_diag"))
 recordtstat2all = recordtstat;
 recordtstat2 = mean(recordtstat2all,3);
 recordtstatstd2 = std(recordtstat2all,0,3);
@@ -10,7 +10,7 @@ recordtstat1 = recordtstat1 - diag(diag(recordtstat1));
 recordtstat = recordtstat1+recordtstat2;
 recordtstatstd = recordtstatstd1+recordtstatstd2;
 w = warning ('off','all');
-sectorinfo = readtable("./data/stock_market/stockmarket/constituents_csv.csv", 'TextType', 'string','PreserveVariableNames',false);
+sectorinfo = readtable("./data/constituents_csv.csv", 'TextType', 'string','PreserveVariableNames',false);
 uniqsector = unique(sectorinfo.Sector);
 A = ones(size(recordtstat))*(-100);
 B = tril(A,-1);
@@ -76,5 +76,5 @@ pos = get(gca,'Position');
 ti = get(gca,'TightInset');
 set(gca, 'Position',[1.65 -1 22 25]);
 set(gcf, 'Units', 'Inches', 'Position', [0 0 10.1 10.5], 'PaperUnits', 'Inches', 'PaperSize', [10, 10])
-saveas(fig,strcat('./data/stock_market/plot/heatmat_stock_new2_comp','.png'))
+saveas(fig,strcat('./plot/heatmat_stock_new2_comp','.png'))
 sum(sum(mean(timecost,3)))
