@@ -2,14 +2,16 @@
 
 This document serves to the Round 1 and Round 2 revisions of this paper.
 
-# Contents of subfolders
+# Contents
+
+## Contents of subfolders
 * data: contains data examples
 * output: for recording screen outputs on HPC for tracking job progress and debugging
 * plot: contains outputs of simulations
 * slurm: contains all Unity jobs, written for Slurm job queueing system
 * subroutines: contains subroutines
 
-# Subroutines implementing our method
+## Subroutines implementing our method
 
 Our method is implemented for the deterministic design and random design (J1):
 * Deterministic design:  Our_method_reduced_ustat_CI_deterministic.m
@@ -21,12 +23,12 @@ Our method is implemented for the deterministic design and random design (J1):
    ```
    To display documentation.
 
-# List of other important subroutines
+## List of other important subroutines
 
 * subroutines/motif.m: computes the kernel function
 * subroutines/confidence_interval.m: computes the confidence interval using Cornish-Fisher expansion
 
-# List of auxiliary subroutines
+## List of auxiliary subroutines
 
 * subroutines/g112_function.cpp: this is only needed by the benchmark method based on complete U-statistic, not our method
 
