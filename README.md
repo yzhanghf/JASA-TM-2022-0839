@@ -9,7 +9,7 @@ This document serves to the Round 1 and Round 2 revisions of this paper.
 * slurm: contains all Unity jobs, written for Slurm job queueing system
 * subroutines: contains subroutines
 
-# Functions implementing our method
+# Subroutines implementing our method
 
 Our method is implemented for the deterministic design and random design (J1):
 * Deterministic design:  Our_method_reduced_ustat_CI_deterministic.m
@@ -31,11 +31,11 @@ Our method is implemented for the deterministic design and random design (J1):
 * subroutines/g112_function.cpp: this is only needed by the benchmark method based on complete U-statistic, not our method
 
 
-## Hardware requirement:  computing cluster, such as Unity
+# Hardware requirement:  computing cluster, such as Unity
 * Most, if not all, experiments in this code are likely infeasible to run on personal computers.  Therefore, all reproducibility details are written for running on high-performance computing (HPC) clusters, such as Unity.  In this document, we will use Unity as an example.
 * In this work, we use the word "Magpie" as the anonymized name.
 
-## Steps to reproduce simulation and data example results
+# Steps to reproduce simulation and data example results
 
 0. [Preparation] Upload all contents of this repository to a unity folder, under the path:
    ```
