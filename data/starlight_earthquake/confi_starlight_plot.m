@@ -1,5 +1,6 @@
 
 addpath('subroutines');
+addpath('package');
 
 
 

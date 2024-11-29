@@ -1,5 +1,6 @@
 
 addpath('subroutines');
+addpath('package');
 
 tic;
 train = tsvread("./data/Earthquakes_TRAIN.tsv");

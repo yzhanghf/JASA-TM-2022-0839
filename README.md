@@ -113,6 +113,7 @@ In all the steps that follow, if you encounter the error that folder doesn't exi
       Before running the code, the user might need to run the following lines to compile the C++ code into MEX file in the right folder:
       ```
       cd /home/Magpie/U-Statistic-Reduction/data/starlight_earthquake/subroutines
+      module load cmake
       module load matlab
       matlab -nodesktop -nodisplay
       mex h_g1g1g2_4.cpp -I"/home/Magpie/Armadillo/usr/include"
@@ -152,6 +153,7 @@ In all the steps that follow, if you encounter the error that folder doesn't exi
       Before run the code, we still need to run the following lines to compile the C++ code into MEX file in the right folder:
          ```
          cd /home/Magpie/U-Statistic-Reduction/data/stock_market/subroutines
+         module load cmake
          module load matlab
          matlab -nodesktop -nodisplay
          mex h_g1g1g2_4.cpp -I"/home/Magpie/Armadillo/usr/include"
