@@ -24,14 +24,25 @@ Our method is implemented for the deterministic design and random design (J1):
    To display documentation.
 
 ## List of other important subroutines
-
 * subroutines/motif.m: computes the kernel function
 * subroutines/confidence_interval.m: computes the confidence interval using Cornish-Fisher expansion
 
-## List of auxiliary subroutines
-
+## List of auxiliary subroutines/functions
 * subroutines/g112_function.cpp: this is only needed by the benchmark method based on complete U-statistic, not our method
+* nondegenerate_MC2.m: simulating the true distribution to evaluate all methods, for deterministic design
+* nondegenerate_MC_random2.m: simulating the true distribution to evaluate all methods, for random design J1
+* plot*.m: plotting functions
 
+## List of files implementing benchmark methods
+* coverage_prob_both_complete.m: complete U-statistic, for both deterministic and random designs
+* Deterministic design:
+   + coverage_prob_deter_normal.m: normal approximation
+   + coverage_prob_deter_resample.m: resample bootstrap
+   + coverage_prob_deter_subsample.m: subsample bootstrap
+* Random design J1:
+   + coverage_prob_random_normal.m: normal approximation
+   + coverage_prob_random_resample.m: resample bootstrap
+   + coverage_prob_random_subsample.m: subsample bootstrap
 
 # Hardware requirement:  computing cluster, such as Unity
 * Most, if not all, experiments in this code are likely infeasible to run on personal computers.  Therefore, all reproducibility details are written for running on high-performance computing (HPC) clusters, such as Unity.  In this document, we will use Unity as an example.
