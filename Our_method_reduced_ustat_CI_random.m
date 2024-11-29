@@ -13,6 +13,8 @@ function [u_stat, CI] = Our_method_reduced_ustat_CI_random(motif, type, x, r, al
 
     M_alpha = min(floor(n^(al-1)),floor((n-1)/(2^(r-1)-1)));
     M_alpha2 = min(floor(n^(al-1)),floor((n-1)/(r-1)));
+
+    % Computing the members of J_{n,\alpha}
     li_hat = [];
     for i = 1:M_alpha2
             item = zeros(n,r);
@@ -23,7 +25,6 @@ function [u_stat, CI] = Our_method_reduced_ustat_CI_random(motif, type, x, r, al
             item = mod(item-1,n)+1;
             li_hat = [li_hat;item];
     end
-
 
     g2_li = zeros(M_alpha2*n,r,2);
     g2_li1 = [];
@@ -45,7 +46,10 @@ function [u_stat, CI] = Our_method_reduced_ustat_CI_random(motif, type, x, r, al
     g2_li(:,:,2) = g2_li2;
     g2_li = mod(g2_li-1,n)+1;
 
-    [li2,check] = randomsamle(n,al);
+    li2 = randomsamle(n,al);
+
+
+    % Computing reduced U-statistic, variance estimation and summary statistics needed by the Edgeworth expansion
     mu_hat_esti = mean(motif(x(li_hat),type));
     mu_2 = mu_hat_esti^2;
     sigma_h2 = mean(motif(x(li_hat),type).^2)-mu_2;
@@ -62,6 +66,8 @@ function [u_stat, CI] = Our_method_reduced_ustat_CI_random(motif, type, x, r, al
     g2 = mean(xx6.*xx7) ;
     M_alpha_new = n^(al-1)*(1+1/(r*n^(al-1)))/(1+n^(al-2)*g2*r*(r-1)/(sigma_h2-r*ksei^2));
     var_all = sum(al_number.^2)/(floor(n^al)^2)*ksei2;
+
+    % Computing confidence interval
     [gj_l, gj_u] = confidence_level(percent,ksei, 1,1,sigma_h2, b2,b1, al, g_qub, intera, M_alpha_new,n,1);
     q_h = mu_hat - sqrt(var_all)*(gj_u);
     q_l = mu_hat - sqrt(var_all)*(gj_l);

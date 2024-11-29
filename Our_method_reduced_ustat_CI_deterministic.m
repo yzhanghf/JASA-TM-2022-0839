@@ -18,6 +18,7 @@ function [u_stat, CI] = Our_method_reduced_ustat_CI_deterministic(motif, type, x
     b1 = (2^(r-1)-1)/2^(r-1);
     M_alpha2 = min(floor(n^(al-1)),floor((n-1)/(r-1)));
 
+    % Computing the members of J_{n,\alpha}
     li2 = [];
     for i = (floor(b1*M_alpha)+1):M_alpha
             item = zeros(n,r);
@@ -40,6 +41,7 @@ function [u_stat, CI] = Our_method_reduced_ustat_CI_deterministic(motif, type, x
             li_hat = [li_hat;item];
     end
 
+    % Computing reduced U-statistic, variance estimation and summary statistics needed by the Edgeworth expansion
     mu_hat_esti = mean(motif(x(li_hat),type));
     mu_2 = mu_hat_esti^2;
     sigma_h2 = mean(motif(x(li_hat),type).^2)-mu_2;
@@ -53,6 +55,8 @@ function [u_stat, CI] = Our_method_reduced_ustat_CI_deterministic(motif, type, x
     intera = 1/size(li_hat,1)*sum((h_vec'-mu_hat_esti-(al_weight(li_hat(:,1))-mu_hat_esti)-(al_weight(li_hat(:,r))-mu_hat_esti)).*(al_weight(li_hat(:,1))-mu_hat_esti).*(al_weight(li_hat(:,r))-mu_hat_esti));
     var_all = (ksei2*r^2)/n;
     ksei = sqrt(ksei2);
+
+    % Computing confidence interval
     [gj_l, gj_u] = confidence_level(percent,ksei, 1,1,sigma_h2, b2,b1, al, g_qub, intera, M_alpha,n,0);
     q_h = mu_hat - sqrt(var_all)*(gj_u);
     q_l = mu_hat - sqrt(var_all)*(gj_l);

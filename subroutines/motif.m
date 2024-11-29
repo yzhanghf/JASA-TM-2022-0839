@@ -1,7 +1,10 @@
 function [f]= motif(item,type)
-    % if (size(item, 2)~=3)
-    %     error("motif function error: incorrect input dimensions!\n");
-    % end
+    % This function computes a list of individual kernel function terms, we programmed for r=3, users can tweak it
+    % Input:
+    % item: matrix, contains r columns, each row of "item" should be one (X_{i_1},...,X_{i_r})
+    % type: string, users may write several different kernel functions in this program, and differentiate them by "type"
+    % Output:
+    % f: f_j is the kernel function evaluated at the jth row of "item"
 
     x = item(:,1);
     y = item(:,2);

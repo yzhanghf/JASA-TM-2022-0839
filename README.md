@@ -2,6 +2,13 @@
 
 This document serves to the Round 1 and Round 2 revisions of this paper.
 
+# Contents of subfolders
+* data: contains data examples
+* output: for recording screen outputs on HPC for tracking job progress and debugging
+* plot: contains outputs of simulations
+* slurm: contains all Unity jobs, written for Slurm job queueing system
+* subroutines: contains subroutines
+
 # Functions implementing our method
 
 Our method is implemented for the deterministic design and random design (J1):
@@ -13,6 +20,16 @@ Our method is implemented for the deterministic design and random design (J1):
    help Our_method_reduced_ustat_CI_random
    ```
    To display documentation.
+
+# List of other important subroutines
+
+* subroutines/motif.m: computes the kernel function
+* subroutines/confidence_interval.m: computes the confidence interval using Cornish-Fisher expansion
+
+# List of auxiliary subroutines
+
+* subroutines/g112_function.cpp: this is only needed by the benchmark method based on complete U-statistic, not our method
+
 
 ## Hardware requirement:  computing cluster, such as Unity
 * Most, if not all, experiments in this code are likely infeasible to run on personal computers.  Therefore, all reproducibility details are written for running on high-performance computing (HPC) clusters, such as Unity.  In this document, we will use Unity as an example.
