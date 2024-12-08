@@ -1,6 +1,21 @@
 
 function [lowercf,uppercf] = confidence_level(percent,ksei, g2,g3,sigma_h2, b2,b1, al, g_qub, intera, M_alpha,n,randomness)
 	% This function computes the Cornish-Fisher expansion
+	% depends on: g_tuda_esti.m, which computes each individual term in Cornish-Fisher expansion
+	% Input list:
+	% percent: percentage
+	% ksei: estimated \xi_1
+	% g2,g3: obsolete, but kept for now for stability of program, can fill in arbitrary values
+	% sigma_h2: estimated \sigma_h^2
+	% b2, b1: only needed by deterministic design, same as b_2 and b_1 in paper
+	% al: alpha
+	% g_qub:  estimated E[g_1^3(X_1)]
+	% intera: estimated E[g_1(X_1)g_1(X_2)g_2(X_1,X_2)]
+	% M_alpha: M_\alpha in paper
+	% n: sample size of X
+	% randomness: =0: deterministic design; =1: random design (J1)
+	% Output: CI lower and upper bounds
+
 	z_l = norminv(1-percent/2);
 	z_u = norminv(percent/2);
 

@@ -1,4 +1,5 @@
 function [x] = sampling(n,type)
+    % Generating X data
     switch type
         case 'example3'
 

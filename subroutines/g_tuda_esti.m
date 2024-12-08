@@ -2,6 +2,13 @@
 
 
 function [value] = g_tuda_esti(u, ksei, g2,g3,sigma_h2, b2,b1,l,randomness)
+    % Computing estimated Cornish-Fisher expansion terms
+    % u: input value, range: u\in[0,1]
+    % ksei: \xi_1 
+    % sigma_h2: \sigma_h^2
+    % b2, b1: only needed by deterministic design, the same as b_2 and b_1, respectively
+    % l (ell): the index of Cornish-Fisher expansion term
+    % randomness=0: deterministic design; =1: random design (J1)
 	r = 3;
     switch randomness
     case 0

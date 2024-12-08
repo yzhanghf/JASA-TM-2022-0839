@@ -1,4 +1,8 @@
 function [Ir_list,output_check_OK] = randomsamle(n,alpha)
+    % Computing J_{n,alpha}
+    % Input: n, alpha (both self-explanatory)
+    % Output: Ir_list: generated J_{n,alpha}
+    % output_check_OK: debugging indicator, users can ignore it
     N = floor(n^alpha);
     output_check_OK = false;
 

@@ -1,4 +1,5 @@
 function [output]= hermite_function(degree,x)
+    % Computing Hermite function needed by intermediate steps of our method
     
     if (degree < 0 || degree > 10)
         error('Hermite function cannot handle this degree.\n');
