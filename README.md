@@ -28,7 +28,7 @@ Our method is implemented for the deterministic design and random design (J1):
 * subroutines/confidence_interval.m: computes the confidence interval using Cornish-Fisher expansion
 
 ## List of auxiliary subroutines/functions
-* subroutines/g112_function.cpp: this is only needed by the benchmark method based on complete U-statistic, not our method
+* subroutines/h_g1g1g2.cpp and subroutines/g112_function.cpp: these functions, run consecutively, compute an estimation for E[g_1(X_1)g_1(X_2)g_2(X_1,X_2)]; they are only needed by the benchmark method based on complete U-statistic, not our method
 * nondegenerate_MC2.m: simulating the true distribution to evaluate all methods, for deterministic design
 * nondegenerate_MC_random2.m: simulating the true distribution to evaluate all methods, for random design J1
 * plot*.m: plotting functions
