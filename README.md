@@ -40,7 +40,7 @@ Our method is implemented for the deterministic design and random design (J1):
    + coverage_prob_deter_normal.m: normal approximation
    + coverage_prob_deter_resample.m: resample bootstrap
    + coverage_prob_deter_subsample.m: subsample bootstrap
-* Random design J1:
+* Random design (J1):
    + coverage_prob_random_normal.m: normal approximation
    + coverage_prob_random_resample.m: resample bootstrap
    + coverage_prob_random_subsample.m: subsample bootstrap
@@ -63,7 +63,7 @@ Our method is implemented for the deterministic design and random design (J1):
    Please notice that the Unity server that you use to reproduce this code may have a different folder structure -- in which case, please also revise the Slurm scripts under the "slurm" subfolder accordingly.
 
 1. [Preparation] In this work, we use the word "Magpie" as the anonymized name.
-   To run our code, you need to replace "Magpie" by your (reviewer's) own username.
+   To run our code, you need to replace "Magpie" by your own username.
 
    First, edit "folderlist.txt", replace "Magpie" there by your own username.
    Then in Unity commandline, run
