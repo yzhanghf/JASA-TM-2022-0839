@@ -177,7 +177,7 @@ In all the steps that follow, if you encounter the error that folder doesn't exi
       source("starlight_CI_plot.R");
       source("earthquake_CI_plot.R");
       ```
-      Resulting plots will be located at: /home/Magpie/U-statistic-reduction/data/starlight_earthquake/plot
+      Resulting plots will be located at: /home/Magpie/U-statistic-reduction/data/starlight_earthquake/plot, these results form Figure 4.
    
    2. Stock market data
       
@@ -204,7 +204,7 @@ In all the steps that follow, if you encounter the error that folder doesn't exi
       ```
       sh stock_run_last_two_plot_commands.sh
       ```
-      Resulting plots will be located at: /home/Magpie/U-statistic-reduction/data/stock_market/plot
+      Resulting plots will be located at: /home/Magpie/U-statistic-reduction/data/stock_market/plot, these results form Figure 5.
 
 
    
