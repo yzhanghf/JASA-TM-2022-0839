@@ -133,6 +133,7 @@ In all the steps that follow, if you encounter the error that folder doesn't exi
    sbatch plot_and_benchmarks_CDF-1.sh
    sbatch plot_and_benchmarks_CDF-2.sh
    ```
+   where the job plot_and_benchmarks_CDF-1.sh reproduces Figure 2 and plot_and_benchmarks_CDF-2.sh reproduces Figure 3.
 
    Then all simulation plots will be outputted to the "plot" subfolder.
 
