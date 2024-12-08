@@ -194,15 +194,15 @@ In all the steps that follow, if you encounter the error that folder doesn't exi
       To run our method, run the following code:
       ```
       cd /home/Magpie/U-Statistic-Reduction/slurm/Data-2-Stockmarket
-      sh S_c31.sh
-      sh S_c32.sh
-      sh S_c33.sh
-      sh stock_comp.sh
-      sh stock_comp2.sh
+      sbatch S_c31.sh
+      sbatch S_c32.sh
+      sbatch S_c33.sh
+      sbatch stock_comp.sh
+      sbatch stock_comp2.sh
       ```
       After these jobs finish running, submit the following job:
       ```
-      sh stock_run_last_two_plot_commands.sh
+      sbatch stock_run_last_two_plot_commands.sh
       ```
       Resulting plots will be located at: /home/Magpie/U-statistic-reduction/data/stock_market/plot, these results form Figure 5.
 
