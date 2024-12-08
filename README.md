@@ -206,6 +206,8 @@ In all the steps that follow, if you encounter the error that folder doesn't exi
       ```
       Resulting plots will be located at: /home/Magpie/U-statistic-reduction/data/stock_market/plot, these results form Figure 5.
 
+   Table 5 is manually computed by summarizing the time cost files from all data examples.
+
 
    
 
