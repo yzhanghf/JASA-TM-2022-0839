@@ -45,6 +45,10 @@ Our method is implemented for the deterministic design and random design (J1):
    + coverage_prob_random_resample.m: resample bootstrap
    + coverage_prob_random_subsample.m: subsample bootstrap
 
+## Imported functions/packages from other authors
+* shadedErrorBar: https://www.mathworks.com/matlabcentral/fileexchange/26311-raacampbell-shadederrorbar
+* fdasrvf: https://www.mathworks.com/matlabcentral/fileexchange/66494-fdasrvf
+
 # Hardware requirement:  computing cluster, such as Unity
 * Most, if not all, experiments in this code are likely infeasible to run on personal computers.  Therefore, all reproducibility details are written for running on high-performance computing (HPC) clusters, such as Unity.  In this document, we will use Unity as an example.
 * In this work, we use the word "Magpie" as the anonymized name.
