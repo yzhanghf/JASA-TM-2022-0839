@@ -26,6 +26,7 @@ Our method is implemented for the deterministic design and random design (J1):
 ## List of other important subroutines
 * subroutines/motif.m: computes the kernel function
 * subroutines/confidence_interval.m: computes the confidence interval using Cornish-Fisher expansion
+* subroutines/randomsamle.m: generate the reduced index set J_{n,alpha}
 
 ## List of auxiliary subroutines/functions
 * subroutines/h_g1g1g2.cpp and subroutines/g112_function.cpp: these functions, run consecutively, compute an estimation for E[g_1(X_1)g_1(X_2)g_2(X_1,X_2)]; they are only needed by the benchmark method based on complete U-statistic, not our method
