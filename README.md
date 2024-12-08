@@ -49,9 +49,9 @@ Our method is implemented for the deterministic design and random design (J1):
 * shadedErrorBar: https://www.mathworks.com/matlabcentral/fileexchange/26311-raacampbell-shadederrorbar
 * fdasrvf: https://www.mathworks.com/matlabcentral/fileexchange/66494-fdasrvf
 
-# Hardware requirement:  computing cluster, such as Unity
+# Hardware requirement:
+* Computing cluster, such as Unity
 * Most, if not all, experiments in this code are likely infeasible to run on personal computers.  Therefore, all reproducibility details are written for running on high-performance computing (HPC) clusters, such as Unity.  In this document, we will use Unity as an example.
-* In this work, we use the word "Magpie" as the anonymized name.
 
 # Steps to reproduce simulation and data example results
 
@@ -62,7 +62,8 @@ Our method is implemented for the deterministic design and random design (J1):
    where recall that "Magpie" is the anonymized name.
    Please notice that the Unity server that you use to reproduce this code may have a different folder structure -- in which case, please also revise the Slurm scripts under the "slurm" subfolder accordingly.
 
-1. [Preparation] Replace "Magpie" by your (reviewer's) own username.
+1. [Preparation] In this work, we use the word "Magpie" as the anonymized name.
+   To run our code, you need to replace "Magpie" by your (reviewer's) own username.
 
    First, edit "folderlist.txt", replace "Magpie" there by your own username.
    Then in Unity commandline, run
