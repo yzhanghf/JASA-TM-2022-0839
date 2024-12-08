@@ -129,9 +129,9 @@ In all the steps that follow, if you encounter the error that folder doesn't exi
    After all these jobs finish running, submit the following jobs:
    ```
    cd /home/Magpie/U-Statistic-Reduction/slurm/
-   sh plot_deter_random.sh
-   sh plot_and_benchmarks_CDF-1.sh
-   sh plot_and_benchmarks_CDF-2.sh
+   sbatch plot_deter_random.sh
+   sbatch plot_and_benchmarks_CDF-1.sh
+   sbatch plot_and_benchmarks_CDF-2.sh
    ```
 
    Then all simulation plots will be outputted to the "plot" subfolder.

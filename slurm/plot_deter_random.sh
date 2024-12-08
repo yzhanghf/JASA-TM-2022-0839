@@ -6,8 +6,8 @@
 #SBATCH --nodes=1 --ntasks-per-node=10 --mem=2gb
 #SBATCH --partition=batch8
 #SBATCH --qos=normal
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=ronaldaylmerfisher@gmail.com
+
+
 cd /home/Magpie/U-Statistic-Reduction
 module load matlab
 matlab -nodesktop -r "plot_cover_comparison_deter;  plot_cover_comparison_random"
