@@ -1,7 +1,6 @@
-function [u_stat, CI] = Our_method_reduced_ustat_CI_random(motif, type, x, r, al, percent)
+function [u_stat, CI] = Our_method_reduced_ustat_CI_random(type, x, r, al, percent)
     % Usage:  Our_method_deterministic(@motif, OTHER-INPUTS)
     % Input list:
-    % motif(n*r-matrix, kernel-function-name): outputs n*1 evaluations of the kernel function evaluated at each row of the matrix input
     % type: a string specifying which motif to be evaluated
     % x: data, i.e., X variables in a classical U-statistic
     % r: degree of the U-stat, should be consistent with motif type
