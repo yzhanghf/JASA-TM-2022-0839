@@ -1,4 +1,4 @@
-function [u_stat, CI] = Our_method_reduced_ustat_CI_deterministic(type, x, r, al, percent, b1, b2)
+function [u_stat, CI] = Our_method_reduced_ustat_CI_deterministic(type, x, r, al, percent, b2, b1)
     % Usage:  Our_method_deterministic(@motif, OTHER-INPUTS)
     % Input list:
     % type: a string specifying which motif to be evaluated
@@ -13,8 +13,10 @@ function [u_stat, CI] = Our_method_reduced_ustat_CI_deterministic(type, x, r, al
 
     n = length(x);
     M_alpha = min(floor(n^(al-1)),floor((n-1)/(2^(r-1)-1)));
-    b2 = 1;
-    b1 = (2^(r-1)-1)/2^(r-1);
+    if ~exist('b2', 'var')
+        b2 = 1;
+        b1 = (2^(r-1)-1)/2^(r-1);
+    end
     M_alpha2 = min(floor(n^(al-1)),floor((n-1)/(r-1)));
 
     % Computing the members of J_{n,\alpha}
@@ -59,7 +61,6 @@ function [u_stat, CI] = Our_method_reduced_ustat_CI_deterministic(type, x, r, al
     [gj_l, gj_u] = confidence_level(percent,ksei, 1,1,sigma_h2, b2,b1, al, g_qub, intera, M_alpha,n,0);
     q_h = mu_hat - sqrt(var_all)*(gj_u);
     q_l = mu_hat - sqrt(var_all)*(gj_l);
-    timeCI1(k,m) = toc;
 
     u_stat = mu_hat;
     CI = [q_l, q_h];
