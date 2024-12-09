@@ -1,4 +1,5 @@
-clear
+addpath('subroutines');
+
 rng(4)
 w = warning ('off','all');
 sectorinfo = readtable("./data/constituents_csv.csv", 'TextType', 'string','PreserveVariableNames',false);

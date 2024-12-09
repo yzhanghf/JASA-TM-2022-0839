@@ -1,4 +1,5 @@
-clear
+addpath('subroutines');
+
 alpha_all = [1.5,2,2.5];
 for alindex = 1:length(alpha_all)
     al = alpha_all(alindex);

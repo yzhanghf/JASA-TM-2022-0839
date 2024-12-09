@@ -1,4 +1,5 @@
-clear
+addpath('subroutines');
+
 load(sprintf("./result/CI_stockall5_comp"))
 recordtstat1 = recordtstat;
 recordtstatstd1 = recordtstatstd;

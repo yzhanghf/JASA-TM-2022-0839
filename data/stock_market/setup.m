@@ -1,4 +1,4 @@
-
+addpath('subroutines');
 
 fprintf('Compiling h_g1g1g2...\n');
 mex h_g1g1g2_4.cpp -I"/home/Magpie/Armadillo/usr/include"

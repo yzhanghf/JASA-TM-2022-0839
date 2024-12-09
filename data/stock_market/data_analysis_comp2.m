@@ -1,4 +1,5 @@
-clear
+addpath('subroutines');
+
 rng(4)
 w = warning ('off','all');
 itern = 10;

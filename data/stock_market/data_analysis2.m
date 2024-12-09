@@ -1,3 +1,5 @@
+addpath('subroutines');
+
 % al = 1.5;
 rng(4)
 w = warning ('off','all');
