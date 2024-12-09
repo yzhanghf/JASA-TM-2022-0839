@@ -2,7 +2,6 @@
 addpath('subroutines');
 addpath('package');
 
-tic;
 train = tsvread("./data/Earthquakes_TRAIN.tsv");
 test = tsvread("./data/Earthquakes_TEST.tsv");
 all_data = [train;test];
@@ -144,6 +143,3 @@ for k = 1:length(length_date_all)
         saveas(h(t),strcat("./plot/earthquake_type",string(typeall(i)),"_",string(length_date),"nonlegend.png"))
     end
 end
-
-timecost = toc;
-save(strcat("./result/earthquake_type"), "timecost")
