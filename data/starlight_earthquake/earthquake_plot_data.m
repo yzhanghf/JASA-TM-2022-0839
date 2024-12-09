@@ -145,4 +145,5 @@ for k = 1:length(length_date_all)
     end
 end
 
-
+timecost = toc;
+save(strcat("./result/earthquake_type"), "timecost")

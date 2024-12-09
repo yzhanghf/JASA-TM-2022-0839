@@ -12,11 +12,14 @@ function [value] = g_tuda_esti(u, ksei, g2,g3,sigma_h2, b2,b1,l,randomness)
 	r = 3;
     switch randomness
     case 0
+        % deterministic design
         switch l
     	    case 1
+                % term 1, i.e., Psi_1
 		        value = (sigma_h2-r*ksei^2)/((b2-b1)*r^2*ksei^2) * u/(2);
 %                 value = (3*g2+g3)/((b2-b1)*r^2*ksei^2) * u/(2);
             case 2
+                % term 2, i.e., Psi_2
 	            value1 = (sigma_h2-r*ksei^2)/((b2-b1)*r^2*ksei^2) * u/(2);
 		        dify = 1/sqrt(2*pi)*exp(-1/2*u ^2)* (-u);	
                 dify1 = (sigma_h2-r*ksei^2)/((b2-b1)*r^2*ksei^2) /(2);
@@ -24,6 +27,7 @@ function [value] = g_tuda_esti(u, ksei, g2,g3,sigma_h2, b2,b1,l,randomness)
                 value = (value1*value1*dify/2-value2-value1*dify1)/(1+normpdf(u)*value1);
 
             case 3
+                % term 3, i.e., Psi_3
                 psi1 = g_tuda_esti(u, ksei, g2,g3,sigma_h2, b2,b1,1,randomness);
                 psi2 = g_tuda_esti(u, ksei, g2,g3,sigma_h2, b2,b1,2,randomness);
 		        syms z 
@@ -43,17 +47,21 @@ function [value] = g_tuda_esti(u, ksei, g2,g3,sigma_h2, b2,b1,l,randomness)
 
         end
     case 1
+        % random design
         switch l
             case 1
+                % term 1, i.e., Psi_1
 		        value = (sigma_h2-r*ksei^2)/(r^2*ksei^2) * u/(2);
 %                 value = (3*g2+g3)/((b2-b1)*r^2*ksei^2) * u/(2);
             case 2
+                % term 2, i.e., Psi_2
 	            value1 = (sigma_h2-r*ksei^2)/(r^2*ksei^2) * u/(2);
 		        dify = 1/sqrt(2*pi)*exp(-1/2*u ^2)* (-u);	
                 dify1 = (sigma_h2-r*ksei^2)/(r^2*ksei^2) /(2);
                 value2 = ((sigma_h2-r*ksei^2)/(r^2*ksei^2))^2 * (u^3-3*u)/(factorial(2*2));
                 value = (value1*value1*dify/2-value2-value1*dify1)/(1+normpdf(u)*value1);
             case 3
+                % term 3, i.e., Psi_3
                 psi1 = g_tuda_esti(u, ksei, g2,g3,sigma_h2, b2,b1,1,randomness);
                 psi2 = g_tuda_esti(u, ksei, g2,g3,sigma_h2, b2,b1,2,randomness);
 		        syms z 
