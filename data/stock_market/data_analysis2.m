@@ -134,7 +134,7 @@ for k = 1:length(uniqsector)
         recordtstatstd(k,m) = nanstd(tstat_all);     
     end
 end
-save(strcat(".//result/CI_stockall5",string(100*al)),"recordpval","recordpvalstd","recordtstat","recordtstatstd","timecost","ksei2_all","mu_hat_all")
+save(strcat("./result/CI_stockall5",string(100*al)),"recordpval","recordpvalstd","recordtstat","recordtstatstd","timecost","ksei2_all","mu_hat_all")
 
 
 
