@@ -10,6 +10,7 @@ function [u_stat, CI] = Our_method_reduced_ustat_CI_random(type, x, r, al, perce
     % u_stat: point estimator of E[U_J]
     % CI: confidence interval for E[U_J] at the level of (1-percent)
 
+    n = length(x);
     M_alpha = min(floor(n^(al-1)),floor((n-1)/(2^(r-1)-1)));
     M_alpha2 = min(floor(n^(al-1)),floor((n-1)/(r-1)));
 
@@ -67,7 +68,7 @@ function [u_stat, CI] = Our_method_reduced_ustat_CI_random(type, x, r, al, perce
     var_all = sum(al_number.^2)/(floor(n^al)^2)*ksei2;
 
     % Computing confidence interval
-    [gj_l, gj_u] = confidence_level(percent,ksei, 1,1,sigma_h2, b2,b1, al, g_qub, intera, M_alpha_new,n,1);
+    [gj_l, gj_u] = confidence_level(percent,ksei, 1,1,sigma_h2, 1,1, al, g_qub, intera, M_alpha_new,n,1);
     q_h = mu_hat - sqrt(var_all)*(gj_u);
     q_l = mu_hat - sqrt(var_all)*(gj_l);
 
