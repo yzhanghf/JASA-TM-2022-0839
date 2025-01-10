@@ -1,5 +1,8 @@
 # Reproducing the results in JASA-TM-2022-0839
 
+Reference:
+* U-Statistic Reduction: Higher-Order Accurate Risk Control and Statistical-Computational Trade-Off,  by Meijia Shao, Dong Xia and Yuan Zhang,  Journal of the American Statistical Association (2025+),
+
 How to cite:
 ```bibtex
 @article{shao2025u,
