@@ -1,6 +1,17 @@
 # Reproducing the results in JASA-TM-2022-0839
 
-This document serves to the Round 1 and Round 2 revisions of this paper.
+How to cite:
+```bibtex
+@article{shao2025u,
+   author = {Shao,Meijia and Xia,Dong and Zhang,Yuan},
+   journal = {Journal of the American Statistical Association},
+   title = {U-Statistic Reduction: Higher-Order Accurate Risk Control and Statistical-Computational Trade-Off},
+   year = {2025+},
+   volume = {In press},
+   doi = {10.1080/01621459.2024.2448029}
+}
+```
+
 
 # Contents
 
