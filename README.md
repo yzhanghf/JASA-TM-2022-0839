@@ -15,6 +15,7 @@ How to cite:
 }
 ```
 
+This repository was mostly composed by Meijia Shao https://github.com/MjiaShao.
 
 # Contents
 
